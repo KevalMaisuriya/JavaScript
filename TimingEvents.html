@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>This is Timing Events</title>
+    </head>
+    <body>
+        <div>
+            <div>
+                <p>Want to know my Name?</p>
+                <p id = "showMyName"></p>
+                <br>
+                <button id = "btn">Click here</button>
+            </div>
+        </div>
+
+        <script>
+            const myName = document.querySelector('#showMyName');
+            const btn =document.querySelector('#btn');
+
+            const showMyName = () => {
+                myName.innerHTML = "Loading..."
+                setTimeout(() => {
+                    myName.innerHTML = "Keval Maisuriya"
+                }, 1000);
+            }
+
+            btn.addEventListener('click', showMyName)
+        </script>
+    </body>
+</html>

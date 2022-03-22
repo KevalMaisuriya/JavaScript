@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>This is the Mouse Down event</title>
+        <body>
+            <p id="myP" onmousedown="mouseDown()" mouseup="mouseUp()">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+            </p>
+            <script>
+                function mouseDown() {
+                    document.getElementById("myP").style.color = "#F8B627";
+                }
+
+                function mouseUp() {
+                    document.getElementById("myP").style.color = 'red';
+                }
+            </script>
+        </body>
+    </head>
+</html>

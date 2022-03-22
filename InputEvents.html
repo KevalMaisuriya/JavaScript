@@ -1,0 +1,31 @@
+ <html>
+     <head>
+         <title>This is a Input Event</title>
+         <body>
+             <div>
+                 <label for = "">Your Name </label>
+                 <input type="text" name = "" id = "ice">
+                 <br>
+                 <label>Choose an ice cream flavour
+                     <select id = "iceCreams" name = "iceCreams" onchange="selectlElement()">
+                        <option value = "">Select One</option>
+                        <option value = "Chocolate">Chocolate</option>
+                        <option value = "Sardine">Sardine</option>
+                        <option value = "Vanilla">Vanilla</option>    
+                    </select>
+                 </label>
+                 <br>
+                 <div id ="result"></div>
+             </div>
+
+             <script>
+                 const selectlElement = () => {
+                    const inputChange = document.getElementById('ice').value;
+                    const iceCreams = document.getElementById('iceCreams').value;
+                    const result = document.getElementById('result');
+                    result.innerHTML = `User ${inputChange} select ${iceCreams} ice-cream flavour`;
+                 }
+             </script>
+         </body>
+     </head>
+ </html>

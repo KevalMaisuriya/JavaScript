@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>This is SetInterval Event</title>
+    </head>
+    <body>
+        <div>
+            <p>Can you stop me when I reach at 5?</p>
+            <br>
+            <button id = "btn">Click here</button>
+        </div>
+
+        <script>
+            const stopNum = document.querySelector('p');
+            const btn =document.querySelector('#btn');
+            let num = 0;
+            
+            const showMyNum = () => {
+                stopNum.innerHTML = "Loading..."
+                
+                setInterval(() => {
+                    stopNum.innerHTML = `${num}`;
+                    num++;
+                },1000)
+            }
+
+            btn.addEventListener('click', showMyNum)
+        </script>
+    </body>
+</html>
